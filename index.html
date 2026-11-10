@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Evidencias - Barbara Ruiz Vazquez</title>
+  <style>
+    :root {
+      --rosa-fondo: #fff5f7;
+      --rosa-tarjeta: #ffffff;
+      --rosa-principal: #f4acb7;
+      --rosa-secundario: #ffcad4;
+      --rosa-hover: #e07a5f;
+      --texto-oscuro: #5c4b51;
+      --sombra: 0 4px 15px rgba(244, 172, 183, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--rosa-fondo);
+      color: var(--texto-oscuro);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--rosa-secundario), var(--rosa-principal));
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      box-shadow: var(--sombra);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+    }
+
+    .modulo-seccion {
+      background-color: var(--rosa-tarjeta);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--sombra);
+      border-left: 6px solid var(--rosa-principal);
+    }
+
+    .modulo-seccion h2 {
+      color: #9d4ead;
+      color: var(--texto-oscuro);
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px dashed var(--rosa-secundario);
+      padding-bottom: 0.5rem;
+    }
+
+    .grid-practicas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .tarjeta-practica {
+      background-color: #fff0f3;
+      border: 1px solid var(--rosa-secundario);
+      border-radius: 10px;
+      padding: 1.2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tarjeta-practica:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(244, 172, 183, 0.4);
+    }
+
+    .tarjeta-practica h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #805b65;
+    }
+
+    .tarjeta-practica p {
+      font-size: 0.9rem;
+      color: #7a686f;
+      margin-bottom: 1rem;
+    }
+
+    .btn-enlace {
+      display: inline-block;
+      background-color: var(--rosa-principal);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-enlace:hover {
+      background-color: #e5989b;
+    }
+
+    footer {
+      background-color: var(--rosa-secundario);
+      color: var(--texto-oscuro);
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: auto;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .modulo-seccion {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portafolio de Evidencias</h1>
+    <p>Desarrollo e Implementación de Aplicaciones Web</p>
+  </header>
+
+  <main>
+    <!-- BLOQUE 1: CONSTRUYE APLICACIONES WEB -->
+    <section class="modulo-seccion">
+      <h2>Construye Aplicaciones Web</h2>
+      <div class="grid-practicas">
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 1 - Index.html</h3>
+          <p>Uso de Header y alianza Cisco/AGT.</p>
+          <a href="Index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 2 - Indexx.html</h3>
+          <p>Página personal de Barp con tarjetas CSS.</p>
+          <a href="Indexx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 3 - Actividad 3</h3>
+          <p>Manejo de estilos internos y tablas (Poema).</p>
+          <a href="actividad3.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 4 - Indexx4.html</h3>
+          <p>Manejo de hojas de estilo externas.</p>
+          <a href="Indexx4.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 5 - Indexxx.html</h3>
+          <p>Estructura de sitio con header, nav y main/aside.</p>
+          <a href="Indexxx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 6 - Index8.html</h3>
+          <p>Uso y estructuración de listas desordenadas.</p>
+          <a href="Index8.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+        <article class="tarjeta-practica">
+          <h3>Práctica 7 - Index9.html</h3>
+          <p>Menú de navegación mediante listas y enlaces.</p>
+          <a href="index9.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: IMPLEMENTA APLICACIONES WEB -->
+    <section class="modulo-seccion">
+      <h2>Implementa Aplicaciones Web</h2>
+      <div class="grid-practicas">
+        
+        <article class="tarjeta-practica">
+          <h3>Proyecto/Práctica Futura</h3>
+          <p>Sección destinada para las actividades e implementación de aplicaciones web.</p>
+          <a href="#" class="btn-enlace">En construcción</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PERSONALIZADO -->
+  <footer>
+    <p>Barbara Ruiz Vazquez | Grupo 5CPM</p>
+  </footer>
+
+</body>
+</html>
