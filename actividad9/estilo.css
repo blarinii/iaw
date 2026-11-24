@@ -1,0 +1,53 @@
+section{
+    width: 250px;
+}
+
+#lista {
+    counter-reset: li;
+    list-style: decimal;
+    font: 15px 'Tahoma';
+    padding: 0;
+}
+
+#lista li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #FDA8BF;
+    color: white;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+}
+
+#lista li:hover{
+    background: #FDC3D1;
+}
+
+#lista li:hover:before{
+    transform: rotate(180deg);
+}
+
+#lista li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: pink;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #FDC3D1;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+#lista ul li a {
+    text-decoration:none;
+}
