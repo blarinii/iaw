@@ -24,6 +24,10 @@
 
     body {
       background-color: var(--rosa-fondo);
+      background-image: url('https://i.pinimg.com/736x/42/bb/1f/42bb1f508f023e3b995f0a64aca66417.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: var(--texto-oscuro);
       display: flex;
       flex-direction: column;
@@ -34,32 +38,33 @@
       background: linear-gradient(135deg, var(--rosa-secundario), var(--rosa-principal));
       color: white;
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 1.5rem 1rem;
       box-shadow: var(--sombra);
     }
 
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       opacity: 0.95;
     }
 
     main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+      width: 95%;
+      max-width: 1500px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
       flex: 1;
     }
 
     .modulo-seccion {
       background-color: var(--rosa-tarjeta);
       border-radius: 15px;
-      padding: 2rem;
-      margin-bottom: 2rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
       box-shadow: var(--sombra);
       border-left: 6px solid var(--rosa-principal);
     }
@@ -67,24 +72,27 @@
     .modulo-seccion h2 {
       color: #9d4ead;
       color: var(--texto-oscuro);
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
       border-bottom: 2px dashed var(--rosa-secundario);
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
     }
 
     .grid-practicas {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
     }
 
     .tarjeta-practica {
       background-color: #fff0f3;
       border: 1px solid var(--rosa-secundario);
       border-radius: 10px;
-      padding: 1.2rem;
+      padding: 1rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .tarjeta-practica:hover {
@@ -93,25 +101,26 @@
     }
 
     .tarjeta-practica h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
       color: #805b65;
     }
 
     .tarjeta-practica p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #7a686f;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .btn-enlace {
       display: inline-block;
+      align-self: flex-start;
       background-color: var(--rosa-principal);
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.9rem;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: bold;
       transition: background-color 0.2s ease;
     }
@@ -124,7 +133,7 @@
       background-color: var(--rosa-secundario);
       color: var(--texto-oscuro);
       text-align: center;
-      padding: 1.5rem;
+      padding: 1rem;
       margin-top: auto;
       font-weight: 600;
     }
