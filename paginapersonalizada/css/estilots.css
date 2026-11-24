@@ -1,0 +1,62 @@
+body {
+background-image: url('https://i.pinimg.com/736x/ac/20/4f/ac204f7670ce3497cb77439d348ca007.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  font-family: 'Times New Roman', Times, serif;
+  color: #4a3b40;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.7rem;
+  color: #FB6F92; 
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  color: #FF8FAB;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-style: italic;
+  text-align: center;
+}
+
+.tarjeta {
+  background-color: #ffffff; 
+ 
+  border-radius: 12px;
+  padding: 25px 35px;
+  max-width: 400px;
+  width: 100%;
+  
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 4px 15px rgba(136, 14, 79, 0.1);
+  
+  text-align: center;
+}
+
+.tarjeta h2 {
+  font-size: 1.8rem;
+  color: #FF8FAB;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FFB3C6;
+  padding-bottom: 8px;
+}
+
+.tarjeta p {
+  font-size: 1.2rem;
+  color: #FFC2D1;
+  line-height: 1.5;
+  margin: 0;
+}
