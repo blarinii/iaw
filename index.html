@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Evidencias - Barbara Ruiz Vazquez</title>
-  <!-- Fuente estilo limpio/futurista 2000s -->
+  <title>Portafolio Blog - Barbara Ruiz Vazquez</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -12,8 +11,7 @@
       --rosa-fuerte: #e62e7a;
       --rosa-pastel: #ffb3d9;
       --rosa-claro: #ffe6f2;
-      --cristal-blanco: rgba(255, 255, 255, 0.65);
-      --borde-cristal: rgba(255, 255, 255, 0.9);
+      --borde-cristal: rgba(255, 255, 255, 0.92);
       --texto-oscuro: #661438;
       --sombra-aero: 0 8px 32px rgba(230, 46, 122, 0.22);
     }
@@ -26,12 +24,11 @@
     }
 
     body {
-      /* Fondo estilo Frutiger Metro/Aero con degradado luminoso + tu imagen */
       background-color: #ffd6eb;
       background-image: 
         radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 40%),
         radial-gradient(circle at 85% 75%, rgba(255, 153, 204, 0.6) 0%, transparent 45%),
-        url('https://i.pinimg.com/736x/bb/08/2a/bb082ac77228f268236ee3a8eebf1229.jpg');
+        url('https://i.pinimg.com/1200x/dd/9e/35/dd9e3511de0423858085ac8dc8550bc6.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -39,25 +36,9 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    /* Burbujas decorativas flotantes de fondo */
-    .burbujas-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      background-image: 
-        radial-gradient(circle at 10% 80%, rgba(255,255,255,0.6) 0px, rgba(255,255,255,0.1) 40px, transparent 42px),
-        radial-gradient(circle at 90% 15%, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.1) 60px, transparent 62px),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.05) 90px, transparent 92px);
-    }
-
-    /* HEADER ESTILO BARRA WINDOWS VISTA / GEL GLOSSY */
+    /* HEADER ESTILO BARRA GLOSSY */
     header {
       background: linear-gradient(
         180deg, 
@@ -71,92 +52,196 @@
       border-bottom: 2px solid var(--borde-cristal);
       color: white;
       text-align: center;
-      padding: 1.8rem 1rem;
+      padding: 1.5rem 1rem;
       box-shadow: 0 6px 25px rgba(230, 46, 122, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.8);
-      position: relative;
     }
 
     header h1 {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
       text-shadow: 0 2px 6px rgba(153, 0, 61, 0.45), 0 0 15px rgba(255, 255, 255, 0.6);
-      letter-spacing: 0.5px;
     }
 
     header p {
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       font-weight: 600;
       background: rgba(255, 255, 255, 0.25);
       display: inline-block;
-      padding: 0.3rem 1.2rem;
+      padding: 0.25rem 1.2rem;
       border-radius: 50px;
       border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6);
     }
 
-    main {
+    /* CONTENEDOR PRINCIPAL TIPO BLOG (2 COLUMNAS) */
+    .blog-layout {
       width: 95%;
       max-width: 1400px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 1.8rem auto;
+      display: grid;
+      grid-template-columns: 300px 1fr; /* Izquierda: Perfil | Derecha: Actividades */
+      gap: 1.8rem;
+      align-items: start;
       flex: 1;
     }
 
-    /* CONTENEDORES DE MÓDULO (GLASSMORPHISM AERO) */
-    .modulo-seccion {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 230, 242, 0.62));
+    /* ESTILO DE VENTANA AERO / RETRO (PARA PERFIL Y BLOQUES) */
+    .ventana-aero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 230, 242, 0.68));
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-radius: 22px;
-      padding: 1.8rem;
-      margin-bottom: 2rem;
+      border-radius: 18px;
       box-shadow: var(--sombra-aero), inset 0 2px 3px rgba(255, 255, 255, 0.95);
       border: 2px solid var(--borde-cristal);
-      position: relative;
+      overflow: hidden;
+      margin-bottom: 1.8rem;
     }
 
-    .modulo-seccion h2 {
-      color: var(--rosa-fuerte);
-      font-size: 1.6rem;
+    /* BARRA SUPERIOR DE VENTANA CON BOTONES _ □ X */
+    .barra-titulo {
+      background: linear-gradient(
+        180deg, 
+        #ffadd6 0%, 
+        #ff66b2 48%, 
+        #e62e8a 52%, 
+        #ff80bf 100%
+      );
+      padding: 0.55rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid #ffffff;
+      color: white;
       font-weight: 700;
-      margin-bottom: 1.3rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 2px solid rgba(255, 102, 163, 0.3);
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+      text-shadow: 0 1px 2px rgba(153, 0, 61, 0.5);
+    }
+
+    .barra-titulo-texto {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
-    /* Esfera brillante decorativa junto a los títulos */
-    .modulo-seccion h2::before {
+    /* Esferita glossy en el título */
+    .barra-titulo-texto::before {
       content: "";
       display: inline-block;
-      width: 18px;
-      height: 18px;
+      width: 13px;
+      height: 13px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #ffffff 0%, #ff80b3 45%, #e6005c 100%);
-      box-shadow: 0 2px 6px rgba(230, 0, 92, 0.4), inset 0 1px 2px #fff;
+      background: radial-gradient(circle at 30% 30%, #ffffff 0%, #ffb3d9 50%, #cc0052 100%);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
+    .controles-ventana {
+      display: flex;
+      gap: 4px;
+    }
+
+    .controles-ventana span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,182,217,0.7));
+      color: var(--rosa-fuerte);
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-shadow: none;
+      box-shadow: inset 0 1px 1px #fff;
+    }
+
+    .contenido-ventana {
+      padding: 1.3rem;
+    }
+
+    /* SIDEBAR IZQUIERDO: PERFIL */
+    .sidebar-perfil {
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .marco-foto {
+      width: 175px;
+      height: 175px;
+      margin: 0 auto 1rem auto;
+      padding: 6px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #ff99cc 100%);
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(230, 46, 122, 0.25);
+    }
+
+    .marco-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .info-perfil {
+      text-align: center;
+    }
+
+    .info-perfil h2 {
+      font-size: 1.25rem;
+      color: var(--rosa-fuerte);
+      margin-bottom: 0.7rem;
+      text-shadow: 0 1px 2px #fff;
+    }
+
+    .dato-box {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid #ffffff;
+      border-radius: 12px;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 0.6rem;
+      text-align: left;
+      font-size: 0.88rem;
+      box-shadow: inset 0 1px 3px rgba(255, 102, 163, 0.15);
+    }
+
+    .dato-box strong {
+      color: var(--rosa-fuerte);
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .estado-blog {
+      margin-top: 0.8rem;
+      padding: 0.5rem;
+      border-radius: 50px;
+      background: linear-gradient(180deg, #fff0f7, #ffd6eb);
+      border: 1.5px solid #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--rosa-fuerte);
+    }
+
+    /* COLUMNA DERECHA: ENTRADAS DE ACTIVIDADES */
     .grid-practicas {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1.1rem;
     }
 
-    /* TARJETAS DE PRÁCTICA TIPO CRISTAL CON REFLEJO SUPERIOR */
     .tarjeta-practica {
       background: linear-gradient(
         180deg, 
-        rgba(255, 255, 255, 0.9) 0%, 
-        rgba(255, 240, 247, 0.72) 50%, 
-        rgba(255, 214, 235, 0.8) 100%
+        rgba(255, 255, 255, 0.92) 0%, 
+        rgba(255, 240, 247, 0.75) 50%, 
+        rgba(255, 214, 235, 0.82) 100%
       );
       border: 1.5px solid #ffffff;
-      border-radius: 18px;
-      padding: 1.2rem;
+      border-radius: 16px;
+      padding: 1.1rem;
       transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
@@ -166,7 +251,7 @@
       overflow: hidden;
     }
 
-    /* Brillo superior estilo "Agua / Gel" */
+    /* Reflejo superior estilo gel */
     .tarjeta-practica::before {
       content: "";
       position: absolute;
@@ -175,27 +260,27 @@
       right: 0;
       height: 45%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.05) 100%);
-      border-radius: 16px 16px 50% 50% / 16px 16px 15px 15px;
+      border-radius: 14px 14px 50% 50% / 14px 14px 15px 15px;
       pointer-events: none;
     }
 
     .tarjeta-practica:hover {
-      transform: translateY(-6px) scale(1.02);
+      transform: translateY(-5px) scale(1.02);
       box-shadow: 0 10px 25px rgba(230, 46, 122, 0.3), 0 0 15px rgba(255, 255, 255, 0.9);
       border-color: #ff99cc;
     }
 
     .tarjeta-practica h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
       color: var(--rosa-fuerte);
       position: relative;
       z-index: 1;
     }
 
     .tarjeta-practica p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #732649;
       margin-bottom: 0.9rem;
       line-height: 1.4;
@@ -203,7 +288,6 @@
       z-index: 1;
     }
 
-    /* BOTÓN PÍLDORA GLOSSY (EL ELEMENTO MÁS FRUTIGER AERO) */
     .btn-enlace {
       display: inline-block;
       align-self: flex-start;
@@ -216,9 +300,9 @@
       );
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1.2rem;
+      padding: 0.45rem 1.1rem;
       border-radius: 50px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       border: 1.5px solid #ffffff;
       box-shadow: 0 4px 10px rgba(230, 46, 122, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.9);
@@ -240,7 +324,6 @@
       transform: scale(1.04);
     }
 
-    /* FOOTER ESTILO BARRA DE TAREAS AERO */
     footer {
       background: linear-gradient(
         180deg, 
@@ -253,144 +336,205 @@
       color: #ffffff;
       text-shadow: 0 1px 3px rgba(128, 0, 51, 0.5);
       text-align: center;
-      padding: 1.1rem;
+      padding: 1rem;
       margin-top: auto;
       font-weight: 700;
-      box-shadow: 0 -4px 15px rgba(230, 46, 122, 0.2);
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.7rem;
+    /* ADAPTABLE A CELULAR */
+    @media (max-width: 850px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
       }
-      .modulo-seccion {
-        padding: 1.2rem;
+      .sidebar-perfil {
+        position: static;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="burbujas-bg"></div>
-
   <header>
     <h1>Portafolio de Evidencias</h1>
-    <p>Desarrollo e Implementación de Aplicaciones Web</p>
+    <p>♡ Bienvenidos a mi blog de prácticas web ♡</p>
   </header>
 
-  <main>
-    <!-- BLOQUE 1: CONSTRUYE APLICACIONES WEB -->
-    <section class="modulo-seccion">
-      <h2>Construye Aplicaciones Web</h2>
-      <div class="grid-practicas">
+  <div class="blog-layout">
+    
+    <!-- COLUMNA IZQUIERDA: BLOQUE DE PERFIL -->
+    <aside class="sidebar-perfil">
+      <div class="ventana-aero">
+        <div class="barra-titulo">
+          <span class="barra-titulo-texto">mi perfil ♡</span>
+          <div class="controles-ventana">
+            <span>_</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
 
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 1 - Index.html</h3>
-            <p>Uso de Header y alianza Cisco/AGT.</p>
-            <p><strong>Barbara Ruiz Vazquez 5CPM</strong></p>
+        <div class="contenido-ventana info-perfil">
+          <div class="marco-foto">
+            <!-- CAMBIA "tu-foto.jpg" POR EL NOMBRE DE TU IMAGEN EN TU CARPETA -->
+            <img src="https://i.pinimg.com/736x/8f/2c/3a/8f2c3a9e8b8c9d7e6f5a4b3c2d1e0f9a.jpg" alt="Foto de Barbara Ruiz Vazquez">
           </div>
-          <a href="Caso_Header/Index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
 
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 2 - Indexx.html</h3>
-            <p>Página personal de Barp con tarjetas CSS.</p>
-          </div>
-          <a href="paginapersonalizada/css/Indexx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
+          <h2>Barbara Ruiz Vazquez</h2>
 
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 3 - Actividad 3</h3>
-            <p>Manejo de estilos internos y tablas (Poema).</p>
+          <div class="dato-box">
+            <strong>Grupo:</strong>
+            5CPM
           </div>
-          <a href="2brv/actividad3.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
 
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 4 - Indexx4.html</h3>
-            <p>Manejo de hojas de estilo externas.</p>
+          <div class="dato-box">
+            <strong>Materia / Módulo:</strong>
+            Desarrollo e Implementación de Aplicaciones Web
           </div>
-          <a href="actividad4/Indexx4.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
 
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 5 - Indexxx.html</h3>
-            <p>Estructura de sitio con header, nav y main/aside.</p>
+          <div class="estado-blog">
+            ✿ Estado: Programando... ✿
           </div>
-          <a href="actividad5/Indexxx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-        
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 6 - index.html</h3>
-            <p>Posicionamiento flotante</p>
-          </div>
-          <a href="actividad6/index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 7 - index.html</h3>
-            <p>Uso de etiqueta code</p>
-          </div>
-          <a href="actividad7/index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-        
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 8 - Index8.html</h3>
-            <p>Uso y estructuración de listas desordenadas.</p>
-          </div>
-          <a href="actividad/Index8.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 9 - Index9.html</h3>
-            <p>Menú de navegación mediante listas y enlaces.</p>
-          </div>
-          <a href="actividad9/index9.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Práctica 10 - Index10.html</h3>
-            <p>Caso Base.</p>
-          </div>
-          <a href="Caso_Base/Actividad10.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
-
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Actividad Integradora - Caso_ProyectoWeb</h3>
-            <p>Caso Proyecto Web.</p>
-          </div>
-          <a href="Caso_ProyectoWeb_Agencia_BRV/Index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
-        </article>
+        </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- BLOQUE 2: IMPLEMENTA APLICACIONES WEB -->
-    <section class="modulo-seccion">
-      <h2>Implementa Aplicaciones Web</h2>
-      <div class="grid-practicas">
-        
-        <article class="tarjeta-practica">
-          <div>
-            <h3>Proyecto/Práctica Futura</h3>
-            <p>Sección destinada para las actividades e implementación de aplicaciones web.</p>
+    <!-- COLUMNA DERECHA: ENTRADAS DE PRÁCTICAS -->
+    <main>
+      <!-- BLOQUE 1: CONSTRUYE APLICACIONES WEB -->
+      <section class="ventana-aero">
+        <div class="barra-titulo">
+          <span class="barra-titulo-texto">Construye Aplicaciones Web</span>
+          <div class="controles-ventana">
+            <span>_</span>
+            <span>□</span>
+            <span>×</span>
           </div>
-          <a href="#" class="btn-enlace">En construcción</a>
-        </article>
+        </div>
 
-      </div>
-    </section>
-  </main>
+        <div class="contenido-ventana">
+          <div class="grid-practicas">
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 1 - Index.html</h3>
+                <p>Uso de Header y alianza Cisco/AGT.</p>
+                <p><strong>Barbara Ruiz Vazquez 5CPM</strong></p>
+              </div>
+              <a href="Caso_Header/Index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 2 - Indexx.html</h3>
+                <p>Página personal de Barp con tarjetas CSS.</p>
+              </div>
+              <a href="paginapersonalizada/css/Indexx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 3 - Actividad 3</h3>
+                <p>Manejo de estilos internos y tablas (Poema).</p>
+              </div>
+              <a href="2brv/actividad3.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 4 - Indexx4.html</h3>
+                <p>Manejo de hojas de estilo externas.</p>
+              </div>
+              <a href="actividad4/Indexx4.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 5 - Indexxx.html</h3>
+                <p>Estructura de sitio con header, nav y main/aside.</p>
+              </div>
+              <a href="actividad5/Indexxx.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+            
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 6 - index.html</h3>
+                <p>Posicionamiento flotante</p>
+              </div>
+              <a href="actividad6/index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 7 - index.html</h3>
+                <p>Uso de etiqueta code</p>
+              </div>
+              <a href="actividad7/index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+            
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 8 - Index8.html</h3>
+                <p>Uso y estructuración de listas desordenadas.</p>
+              </div>
+              <a href="actividad/Index8.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 9 - Index9.html</h3>
+                <p>Menú de navegación mediante listas y enlaces.</p>
+              </div>
+              <a href="actividad9/index9.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Práctica 10 - Index10.html</h3>
+                <p>Caso Base.</p>
+              </div>
+              <a href="Caso_Base/Actividad10.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Actividad Integradora - Caso_ProyectoWeb</h3>
+                <p>Caso Proyecto Web.</p>
+              </div>
+              <a href="Caso_ProyectoWeb_Agencia_BRV/Index.html" target="_blank" class="btn-enlace">Ver Práctica</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 2: IMPLEMENTA APLICACIONES WEB -->
+      <section class="ventana-aero">
+        <div class="barra-titulo">
+          <span class="barra-titulo-texto">Implementa Aplicaciones Web</span>
+          <div class="controles-ventana">
+            <span>_</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
+
+        <div class="contenido-ventana">
+          <div class="grid-practicas">
+            
+            <article class="tarjeta-practica">
+              <div>
+                <h3>Proyecto/Práctica Futura</h3>
+                <p>Sección destinada para las actividades e implementación de aplicaciones web.</p>
+              </div>
+              <a href="#" class="btn-enlace">En construcción</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
 
   <!-- FOOTER PERSONALIZADO -->
   <footer>
