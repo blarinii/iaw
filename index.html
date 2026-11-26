@@ -38,7 +38,6 @@
       min-height: 100vh;
     }
 
-    /* HEADER ESTILO BARRA GLOSSY */
     header {
       background: linear-gradient(
         180deg, 
@@ -73,7 +72,6 @@
       border: 1px solid rgba(255, 255, 255, 0.7);
     }
 
-    /* CONTENEDOR PRINCIPAL TIPO BLOG (2 COLUMNAS) */
     .blog-layout {
       width: 95%;
       max-width: 1400px;
@@ -85,7 +83,6 @@
       flex: 1;
     }
 
-    /* ESTILO DE VENTANA AERO / RETRO (PARA PERFIL Y BLOQUES) */
     .ventana-aero {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 230, 242, 0.68));
       backdrop-filter: blur(12px);
@@ -97,7 +94,6 @@
       margin-bottom: 1.8rem;
     }
 
-    /* BARRA SUPERIOR DE VENTANA CON BOTONES _ □ X */
     .barra-titulo {
       background: linear-gradient(
         180deg, 
@@ -123,7 +119,6 @@
       gap: 0.5rem;
     }
 
-    /* Esferita glossy en el título */
     .barra-titulo-texto::before {
       content: "";
       display: inline-block;
@@ -225,7 +220,6 @@
       color: var(--rosa-fuerte);
     }
 
-    /* COLUMNA DERECHA: ENTRADAS DE ACTIVIDADES */
     .grid-practicas {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -251,7 +245,6 @@
       overflow: hidden;
     }
 
-    /* Reflejo superior estilo gel */
     .tarjeta-practica::before {
       content: "";
       position: absolute;
@@ -341,7 +334,6 @@
       font-weight: 700;
     }
 
-    /* ADAPTABLE A CELULAR */
     @media (max-width: 850px) {
       .blog-layout {
         grid-template-columns: 1fr;
@@ -398,9 +390,8 @@
       </div>
     </aside>
 
-    <!-- COLUMNA DERECHA: ENTRADAS DE PRÁCTICAS -->
     <main>
-      <!-- BLOQUE 1: CONSTRUYE APLICACIONES WEB -->
+ 
       <section class="ventana-aero">
         <div class="barra-titulo">
           <span class="barra-titulo-texto">Construye Aplicaciones Web</span>
@@ -507,7 +498,6 @@
         </div>
       </section>
 
-      <!-- BLOQUE 2: IMPLEMENTA APLICACIONES WEB -->
       <section class="ventana-aero">
         <div class="barra-titulo">
           <span class="barra-titulo-texto">Implementa Aplicaciones Web</span>
@@ -536,7 +526,6 @@
 
   </div>
 
-  <!-- FOOTER PERSONALIZADO -->
   <footer>
     <p>Barbara Ruiz Vazquez | Grupo 5CPM</p>
   </footer>
